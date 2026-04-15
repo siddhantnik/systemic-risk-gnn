@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend.Dockerfile
+    image: siddhantnik/grasp-backend:latest
+    container_name: grasp-backend
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend.Dockerfile
+    image: siddhantnik/grasp-frontend:latest
+    container_name: grasp-frontend
+    ports:
+      - "5173:80"  # Mapping so it remains accessible on port 5173 to match your normal dev environment
+    restart: unless-stopped
+    depends_on:
+      - backend
