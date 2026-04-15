@@ -1,0 +1,375 @@
+{
+    "best_params": {
+        "hidden_dim": 48,
+        "num_layers": 4,
+        "lr": 0.0054293163736750995,
+        "dropout": 0.061259811483585766,
+        "latent_dim": 32
+    },
+    "best_score": 0.99139,
+    "optimization_target": "PR-AUC (maximize)",
+    "all_trials": [
+        {
+            "number": 0,
+            "value": 0.982138,
+            "params": {
+                "hidden_dim": 82,
+                "num_layers": 2,
+                "lr": 0.007034954683443279,
+                "dropout": 0.45315723935200125,
+                "latent_dim": 22
+            },
+            "state": "TrialState.COMPLETE"
+        },
+        {
+            "number": 1,
+            "value": 0.984662,
+            "params": {
+                "hidden_dim": 105,
+                "num_layers": 2,
+                "lr": 0.009133144036016876,
+                "dropout": 0.12228987416665638,
+                "latent_dim": 18
+            },
+            "state": "TrialState.COMPLETE"
+        },
+        {
+            "number": 2,
+            "value": 0.987747,
+            "params": {
+                "hidden_dim": 89,
+                "num_layers": 2,
+                "lr": 0.002720646423131511,
+                "dropout": 0.20376446473860238,
+                "latent_dim": 22
+            },
+            "state": "TrialState.COMPLETE"
+        },
+        {
+            "number": 3,
+            "value": 0.989036,
+            "params": {
+                "hidden_dim": 90,
+                "num_layers": 4,
+                "lr": 0.0014496279098082682,
+                "dropout": 0.07764179525328929,
+                "latent_dim": 11
+            },
+            "state": "TrialState.COMPLETE"
+        },
+        {
+            "number": 4,
+            "value": 0.955989,
+            "params": {
+                "hidden_dim": 54,
+                "num_layers": 2,
+                "lr": 0.00025919192453908074,
+                "dropout": 0.2782209788315328,
+                "latent_dim": 31
+            },
+            "state": "TrialState.COMPLETE"
+        },
+        {
+            "number": 5,
+            "value": 0.939593,
+            "params": {
+                "hidden_dim": 103,
+                "num_layers": 4,
+                "lr": 0.000412263349946532,
+                "dropout": 0.21338129053522908,
+                "latent_dim": 22
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 6,
+            "value": 0.98838,
+            "params": {
+                "hidden_dim": 61,
+                "num_layers": 4,
+                "lr": 0.0029804784781171925,
+                "dropout": 0.023852318169649445,
+                "latent_dim": 18
+            },
+            "state": "TrialState.COMPLETE"
+        },
+        {
+            "number": 7,
+            "value": 0.96643,
+            "params": {
+                "hidden_dim": 118,
+                "num_layers": 2,
+                "lr": 0.0007943719955046674,
+                "dropout": 0.004167477570424849,
+                "latent_dim": 25
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 8,
+            "value": 0.970826,
+            "params": {
+                "hidden_dim": 123,
+                "num_layers": 2,
+                "lr": 0.0036585404709994695,
+                "dropout": 0.3990009731586497,
+                "latent_dim": 25
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 9,
+            "value": 0.969065,
+            "params": {
+                "hidden_dim": 64,
+                "num_layers": 2,
+                "lr": 0.00040112328969327076,
+                "dropout": 0.4895717462289443,
+                "latent_dim": 13
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 10,
+            "value": 0.943929,
+            "params": {
+                "hidden_dim": 20,
+                "num_layers": 3,
+                "lr": 0.00010221655473623373,
+                "dropout": 0.1096749276931423,
+                "latent_dim": 8
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 11,
+            "value": 0.931871,
+            "params": {
+                "hidden_dim": 33,
+                "num_layers": 4,
+                "lr": 0.0014493315401451043,
+                "dropout": 0.031849926872964486,
+                "latent_dim": 14
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 12,
+            "value": 0.948137,
+            "params": {
+                "hidden_dim": 49,
+                "num_layers": 4,
+                "lr": 0.001729355150064103,
+                "dropout": 0.09464023724300548,
+                "latent_dim": 9
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 13,
+            "value": 0.971153,
+            "params": {
+                "hidden_dim": 75,
+                "num_layers": 3,
+                "lr": 0.004016119339730464,
+                "dropout": 0.2993856043468953,
+                "latent_dim": 15
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 14,
+            "value": 0.9429,
+            "params": {
+                "hidden_dim": 92,
+                "num_layers": 4,
+                "lr": 0.0008831466509046099,
+                "dropout": 0.07663374001214682,
+                "latent_dim": 11
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 15,
+            "value": 0.972568,
+            "params": {
+                "hidden_dim": 65,
+                "num_layers": 3,
+                "lr": 0.0020358574818352465,
+                "dropout": 0.1604983817945389,
+                "latent_dim": 17
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 16,
+            "value": 0.988725,
+            "params": {
+                "hidden_dim": 55,
+                "num_layers": 4,
+                "lr": 0.005020211792663928,
+                "dropout": 0.04670190056175552,
+                "latent_dim": 32
+            },
+            "state": "TrialState.COMPLETE"
+        },
+        {
+            "number": 17,
+            "value": 0.98924,
+            "params": {
+                "hidden_dim": 43,
+                "num_layers": 4,
+                "lr": 0.00566481924586601,
+                "dropout": 0.16403537894047965,
+                "latent_dim": 31
+            },
+            "state": "TrialState.COMPLETE"
+        },
+        {
+            "number": 18,
+            "value": 0.969005,
+            "params": {
+                "hidden_dim": 33,
+                "num_layers": 3,
+                "lr": 0.006332047338527669,
+                "dropout": 0.3567034449691052,
+                "latent_dim": 28
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 19,
+            "value": 0.946649,
+            "params": {
+                "hidden_dim": 39,
+                "num_layers": 4,
+                "lr": 0.0011907225860116125,
+                "dropout": 0.1730992484647407,
+                "latent_dim": 28
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 20,
+            "value": 0.951613,
+            "params": {
+                "hidden_dim": 17,
+                "num_layers": 3,
+                "lr": 0.0006186202253880164,
+                "dropout": 0.23984301470944927,
+                "latent_dim": 11
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 21,
+            "value": 0.99139,
+            "params": {
+                "hidden_dim": 48,
+                "num_layers": 4,
+                "lr": 0.0054293163736750995,
+                "dropout": 0.061259811483585766,
+                "latent_dim": 32
+            },
+            "state": "TrialState.COMPLETE"
+        },
+        {
+            "number": 22,
+            "value": 0.977351,
+            "params": {
+                "hidden_dim": 45,
+                "num_layers": 4,
+                "lr": 0.009982390169047587,
+                "dropout": 0.1440942917012075,
+                "latent_dim": 30
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 23,
+            "value": 0.941099,
+            "params": {
+                "hidden_dim": 28,
+                "num_layers": 4,
+                "lr": 0.002304305464965092,
+                "dropout": 0.07260021944431688,
+                "latent_dim": 25
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 24,
+            "value": 0.991016,
+            "params": {
+                "hidden_dim": 76,
+                "num_layers": 4,
+                "lr": 0.0047115484166531255,
+                "dropout": 0.180908460774417,
+                "latent_dim": 29
+            },
+            "state": "TrialState.COMPLETE"
+        },
+        {
+            "number": 25,
+            "value": 0.989545,
+            "params": {
+                "hidden_dim": 72,
+                "num_layers": 3,
+                "lr": 0.005119938271210971,
+                "dropout": 0.20166552446569014,
+                "latent_dim": 29
+            },
+            "state": "TrialState.COMPLETE"
+        },
+        {
+            "number": 26,
+            "value": 0.979325,
+            "params": {
+                "hidden_dim": 74,
+                "num_layers": 3,
+                "lr": 0.0033615849027164462,
+                "dropout": 0.3129857383288247,
+                "latent_dim": 29
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 27,
+            "value": 0.969275,
+            "params": {
+                "hidden_dim": 79,
+                "num_layers": 3,
+                "lr": 0.004795452349489038,
+                "dropout": 0.2452368646231835,
+                "latent_dim": 27
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 28,
+            "value": 0.983574,
+            "params": {
+                "hidden_dim": 99,
+                "num_layers": 3,
+                "lr": 0.007628720224880593,
+                "dropout": 0.20266134483167955,
+                "latent_dim": 32
+            },
+            "state": "TrialState.PRUNED"
+        },
+        {
+            "number": 29,
+            "value": 0.981833,
+            "params": {
+                "hidden_dim": 83,
+                "num_layers": 3,
+                "lr": 0.007601874591219904,
+                "dropout": 0.1299061713717471,
+                "latent_dim": 26
+            },
+            "state": "TrialState.PRUNED"
+        }
+    ],
+    "total_trials_run": 30,
+    "valid_trials_saved": 30
+}
