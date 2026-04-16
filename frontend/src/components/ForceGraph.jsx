@@ -1,9 +1,6 @@
 import { useRef, useEffect, useCallback, useState } from "react";
 import * as d3 from "d3";
 
-const SEVERE_THRESHOLD = 0.60;
-const ELEVATED_THRESHOLD = 0.40;
-
 export default function ForceGraph({
   nodes,
   edges,
@@ -115,12 +112,6 @@ export default function ForceGraph({
     critGlow.append("feMerge").selectAll("feMergeNode")
       .data(["blur", "SourceGraphic"]).join("feMergeNode").attr("in", d => d);
 
-    // Orange glow for severe nodes
-    const severeGlow = defs.append("filter").attr("id", "glow-severe");
-    severeGlow.append("feGaussianBlur").attr("stdDeviation", "2").attr("result", "blur");
-    severeGlow.append("feMerge").selectAll("feMergeNode")
-      .data(["blur", "SourceGraphic"]).join("feMergeNode").attr("in", d => d);
-
     // Green/blue glow for rescue nodes
     const rescueGlow = defs.append("filter").attr("id", "glow-rescue");
     rescueGlow.append("feGaussianBlur").attr("stdDeviation", "4").attr("result", "blur");
@@ -162,16 +153,20 @@ export default function ForceGraph({
     const getColor = (d) => {
       if (rescueSet.has(d.id)) return "#00e5ff";
       if (selectedNode === d.id) return "#ff3b30";
-      if (scoreMap[d.id] !== undefined) {
-        const entry = shockScores?.find(s => s.bank_id === d.id);
-        // Critical: backend hybrid flag (topology + dynamic p85 GNN threshold)
-        if (entry?.is_critical) return "#ff3b30";           // CRITICAL => Deep Red
-        const s = scoreMap[d.id];
-        if (s >= SEVERE_THRESHOLD)   return "#ff9800";      // SEVERE   => Orange
-        if (s >= ELEVATED_THRESHOLD) return "#ffccc5";      // ELEVATED => Light Pink
-        return "#55e16b";                                    // STABLE   => Green
+      
+      // Post-shock Phase (we have data)
+      if (shockScores && shockScores.length > 0) {
+        if (scoreMap[d.id] !== undefined) {
+          const entry = shockScores.find(s => s.bank_id === d.id);
+          if (entry?.is_critical) return "#ff3b30";           // CRITICAL => Deep Red
+          if (!entry?.is_critical && (entry?.delta ?? scoreMap[d.id]) > 0) return "#ffccc5"; // ELEVATED => Light Pink
+          return "#55e16b";                                    // STABLE   => Green
+        }
+        return "#55e16b"; // Unaffected nodes default to Stable
       }
-      return "var(--primary-container)";
+      
+      // Pre-shock Phase (initial network generation)
+      return "var(--primary-container)"; // Beige default
     };
 
     node.append("circle")
@@ -190,7 +185,6 @@ export default function ForceGraph({
         if (rescueSet.has(d.id)) return "url(#glow-rescue)";
         const entry = shockScores?.find(s => s.bank_id === d.id);
         if (entry?.is_critical) return "url(#glow-critical)";
-        if (scoreMap[d.id] >= SEVERE_THRESHOLD) return "url(#glow-severe)";
         return null;
       });
 

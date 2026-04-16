@@ -366,7 +366,7 @@ async def simulate_shock(req: SimulateRequest):
 
     # Invalidate hub cache so bank labels stay correct for this graph
     invalidate_hub_cache()
-    hub_set = _get_hubs(data.edge_index, num_nodes, top_k=min(20, num_nodes // 4))
+    hub_set = _get_hubs(data.edge_index, num_nodes, top_k=min(5, num_nodes // 5))
 
     nodes = []
     for i in range(num_nodes):
