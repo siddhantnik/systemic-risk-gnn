@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const BASE_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+
 const API = axios.create({
-  baseURL: "http://127.0.0.1:8000",
+  baseURL: BASE_URL,
   timeout: 120000, // Bailout optimizer can take time
 });
 
@@ -27,4 +29,4 @@ export const optimizeBailout = (shockedBankId, budgetMillions = 500) =>
 
 export const getMetrics = () => API.get("/metrics").then(r => r.data);
 
-export const PR_CURVE_URL = "http://127.0.0.1:8000/metrics/pr_curve";
+export const PR_CURVE_URL = `${BASE_URL}/metrics/pr_curve`;
